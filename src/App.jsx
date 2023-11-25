@@ -1,7 +1,6 @@
-import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Outlet, createBrowserRouter } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CoinPage from "./pages/CoinPage";
 import "../index.css";
@@ -9,7 +8,13 @@ import "../index.css";
 const App = () => {
   return (
     <>
-      <div className="app">
+      <div
+        style={{
+          backgroundColor: "#14161a",
+          color: "white",
+          minHeight: "100vh",
+        }}
+      >
         <Header />
         <Outlet />
         <Footer />
@@ -35,5 +40,4 @@ const appRouter = createBrowserRouter([
   },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={appRouter} />);
+export default appRouter;

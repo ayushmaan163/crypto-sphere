@@ -4,21 +4,24 @@ import { Outlet, createBrowserRouter } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CoinPage from "./pages/CoinPage";
 import "../index.css";
+import CurrencyContext from "./context/CurrencyContext";
 
 const App = () => {
   return (
     <>
-      <div
-        style={{
-          backgroundColor: "#14161a",
-          color: "white",
-          minHeight: "100vh",
-        }}
-      >
-        <Header />
-        <Outlet />
-        <Footer />
-      </div>
+      <CurrencyContext>
+        <div
+          style={{
+            backgroundColor: "#14161a",
+            color: "white",
+            minHeight: "100vh",
+          }}
+        >
+          <Header />
+          <Outlet />
+          <Footer />
+        </div>
+      </CurrencyContext>
     </>
   );
 };

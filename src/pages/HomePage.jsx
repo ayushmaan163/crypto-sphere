@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
-import Banner from "../components/Banner";
+import Banner from "../components/Banner/Banner";
 import styled from "@emotion/styled";
+import Carousel from "../components/Banner/Carousel";
 
 const BannerContent = styled("div")({
   height: 400,
@@ -46,6 +47,8 @@ const HomePage = () => {
               Get all the info regarding your favorite Crypto Currency
             </Typography>
           </Tagline>
+
+          <Carousel />
         </BannerContent>
       </Banner>
     </>

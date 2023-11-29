@@ -9,8 +9,13 @@ import {
   createTheme,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import { CurrencyState } from "../context/CurrencyContext";
 
 const Header = () => {
+  const { currency, setCurrency } = CurrencyState();
+
+  // console.log(currency);
+
   const darkTheme = createTheme({
     palette: {
       mode: "dark",
@@ -43,6 +48,8 @@ const Header = () => {
                 height: 40,
                 marginLeft: 15,
               }}
+              value={currency}
+              onChange={(e) => setCurrency(e.target.value)}
             >
               <MenuItem value={"INR"}>INR</MenuItem>
               <MenuItem value={"USD"}>USD</MenuItem>

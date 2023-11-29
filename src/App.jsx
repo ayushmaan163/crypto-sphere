@@ -12,7 +12,7 @@ const App = () => {
       <CurrencyContext>
         <div
           style={{
-            backgroundColor: "#14161a",
+            backgroundColor: "#14161A",
             color: "white",
             minHeight: "100vh",
           }}

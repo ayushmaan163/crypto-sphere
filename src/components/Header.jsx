@@ -24,17 +24,17 @@ const Header = () => {
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <AppBar style={{ backgroundColor: "#006DF0" }} position="static">
+      <AppBar style={{ backgroundColor: "black" }} position="static">
         <Container>
           <Toolbar>
             <Link to="/" style={{ flex: 1 }}>
               <Typography
                 style={{
                   fontFamily: "Montserrat",
-                  fontWeight: "bold",
+                  fontWeight: "bolder",
                   fontSize: "x-large",
                   cursor: "pointer",
-                  color: "white",
+                  color: "gold",
                 }}
               >
                 Crypto Sphere

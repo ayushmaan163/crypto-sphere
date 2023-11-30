@@ -7,7 +7,6 @@ import CoinInfo from "../components/CoinInfo";
 import styled from "@emotion/styled";
 import { LinearProgress, Typography } from "@mui/material";
 import { numberWithCommas } from "../components/Banner/Carousel";
-import ReactHtmlParser from "react-html-parser";
 
 const CoinContainer = styled("div")({
   display: "flex",
@@ -96,9 +95,7 @@ const CoinPage = () => {
         </Typography>
 
         <Typography variant="subtitle1">
-          <Description>
-            {ReactHtmlParser(coin?.description.en.split(". ")[0])}.
-          </Description>
+          <Description>{coin?.description.en.split(". ")[0]}.</Description>
         </Typography>
 
         <MarketData>

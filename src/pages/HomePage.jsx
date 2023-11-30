@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import Banner from "../components/Banner/Banner";
 import styled from "@emotion/styled";
 import Carousel from "../components/Banner/Carousel";
+import CoinTable from "../components/CoinTable";
 
 const BannerContent = styled("div")({
   height: 400,
@@ -51,6 +52,8 @@ const HomePage = () => {
           <Carousel />
         </BannerContent>
       </Banner>
+
+      <CoinTable />
     </>
   );
 };

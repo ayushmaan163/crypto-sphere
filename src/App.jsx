@@ -19,7 +19,7 @@ const App = () => {
         >
           <Header />
           <Outlet />
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </CurrencyContext>
     </>

@@ -9,6 +9,8 @@ import { Line } from "react-chartjs-2";
 import { chartDays } from "../config/data";
 import SelectButton from "./SelectButton";
 
+let theme = createTheme();
+
 const InfoContainer = styled("div")({
   width: "75%",
   display: "flex",
@@ -17,12 +19,12 @@ const InfoContainer = styled("div")({
   justifyContent: "center",
   marginTop: 25,
   padding: 40,
-  //   [theme.breakpoints.down("md")]: {
-  //     width: "100%",
-  //     marginTop: 0,
-  //     padding: 20,
-  //     paddingTop: 0,
-  //   },
+  [theme.breakpoints.down("md")]: {
+    width: "100%",
+    marginTop: 0,
+    padding: 20,
+    paddingTop: 0,
+  },
 });
 
 const CoinInfo = ({ coin }) => {

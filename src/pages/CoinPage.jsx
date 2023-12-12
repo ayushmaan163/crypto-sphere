@@ -5,28 +5,31 @@ import axios from "axios";
 import { SingleCoin } from "../config/api";
 import CoinInfo from "../components/CoinInfo";
 import styled from "@emotion/styled";
-import { LinearProgress, Typography } from "@mui/material";
+import { LinearProgress, Typography, createTheme } from "@mui/material";
 import { numberWithCommas } from "../components/Banner/Carousel";
 import parse from "html-react-parser";
 
+let theme = createTheme();
+
 const CoinContainer = styled("div")({
   display: "flex",
-  // [theme.breakpoints.down("md")]: {
-  //   flexDirection: "column",
-  //   alignItems: "center",
-  // },
+  [theme.breakpoints.down("md")]: {
+    flexDirection: "column",
+    alignItems: "center",
+  },
 });
 
 const SideBar = styled("div")({
   width: "30%",
-  // [theme.breakpoints.down("md")]: {
-  //   width: "100%",
-  // },
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   marginTop: 25,
   borderRight: "2px solid grey",
+
+  [theme.breakpoints.down("md")]: {
+    width: "100%",
+  },
 });
 
 const Heading = styled("div")({
@@ -49,17 +52,17 @@ const MarketData = styled("div")({
   padding: 25,
   paddingTop: 10,
   width: "100%",
-  // [theme.breakpoints.down("md")]: {
-  //   display: "flex",
-  //   justifyContent: "space-around",
-  // },
-  // [theme.breakpoints.down("sm")]: {
-  //   flexDirection: "column",
-  //   alignItems: "center",
-  // },
-  // [theme.breakpoints.down("xs")]: {
-  //   alignItems: "start",
-  // },
+  [theme.breakpoints.down("md")]: {
+    display: "flex",
+    justifyContent: "space-around",
+  },
+  [theme.breakpoints.down("sm")]: {
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  [theme.breakpoints.down("xs")]: {
+    alignItems: "start",
+  },
 });
 
 const CoinPage = () => {
@@ -137,7 +140,6 @@ const CoinPage = () => {
                   .toString()
                   .slice(0, -6)
               )}
-              M
             </Typography>
           </span>
         </MarketData>
